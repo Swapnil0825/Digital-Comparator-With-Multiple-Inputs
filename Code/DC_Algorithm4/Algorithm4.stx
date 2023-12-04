@@ -1,0 +1,31 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Algorithm4.v" in library work
+ERROR:HDLCompilers:26 - "Algorithm4.v" line 50 expecting 'end', found 'integer'
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 51 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 51 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 51 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 51 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 52 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 52 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 57 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 57 'i' has not been declared
+ERROR:HDLCompilers:28 - "Algorithm4.v" line 62 'i' has not been declared
+Module <Algorithm4> compiled
+ERROR:HDLCompilers:26 - "Algorithm4.v" line 68 expecting 'endmodule', found 'end'
+Analysis of file <"Algorithm4.prj"> failed.
+--> 
+
+Total memory usage is 135636 kilobytes
+
+Number of errors   :   11 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

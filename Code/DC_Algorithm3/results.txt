@@ -1,0 +1,2 @@
+Error at time=                 450ns dgt=1, expected=0
+          1 errors found in simulation.

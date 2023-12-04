@@ -1,0 +1,34 @@
+ command line:
+   ./Test_Algorithm2_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  55707
+
+Tue May 09 15:03:57 2023
+
+Total Line Count = 124
+
+ Elaboration time 0.015625 sec.
+
+ Estimate current memory usage 72.9334 Meg. 
+
+ Total signals 20
+ Total nets 28
+ Total signal drivers 11
+ Total blocks 7
+ Total primitive blocks 6
+ Total processes 12
+ntrace select -o on -n /Test_Algorithm2/cgt 
+ntrace select -o on -n /Test_Algorithm2/dgt 
+ntrace select -o on -n /Test_Algorithm2/agt 
+ntrace select -o on -n /Test_Algorithm2/bgt 
+ntrace select -o on -n /Test_Algorithm2/a 
+ntrace select -o on -n /Test_Algorithm2/b 
+ntrace select -o on -n /Test_Algorithm2/c 
+ntrace select -o on -n /Test_Algorithm2/d 
+ntrace select -o on -n /Test_Algorithm2/TX_FILE 
+ntrace select -o on -n /Test_Algorithm2/TX_ERROR 
+ntrace start 
+run all 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

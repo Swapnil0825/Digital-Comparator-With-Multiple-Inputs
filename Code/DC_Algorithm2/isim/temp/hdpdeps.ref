@@ -1,0 +1,6 @@
+V3 4
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO isim_temp/glbl       FL $XILINX/verilog/src/glbl.v
+FL "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/Algorithm2.v" 2023/03/04.20:16:28 I.24
+MO isim_temp/Algorithm2 \
+      FL "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/Algorithm2.v"

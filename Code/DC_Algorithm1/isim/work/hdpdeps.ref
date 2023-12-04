@@ -1,0 +1,10 @@
+V3 7
+FL "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/Algorithm1.v" 2023/05/09.12:43:28 I.24
+MO work/Algorithm1 \
+      FL "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/Algorithm1.v"
+FL "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/Test.tfw" 2023/05/06.03:11:59 I.24
+MO work/Test \
+      FL "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/Test.tfw" \
+      MI Algorithm1
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v

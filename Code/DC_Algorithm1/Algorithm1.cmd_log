@@ -1,0 +1,21 @@
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -ifn Algorithm1.xst -ofn Algorithm1.syr
+netgen -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -w -dir netgen/synthesis -ofmt verilog -sim Algorithm1.ngc Algorithm1_synthesis.v
+ngdbuild -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Algorithm1.ngc Algorithm1.ngd
+map -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -p xc3s200-pq208-5 -cm area -pr b -k 4 -c 100 -o Algorithm1_map.ncd Algorithm1.ngd Algorithm1.pcf
+par -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -w -intstyle ise -ol std -t 1 Algorithm1_map.ncd Algorithm1.ncd Algorithm1.pcf
+trce -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -e 3 -l 3 -s 5 -xml Algorithm1 Algorithm1.ncd -o Algorithm1.twr Algorithm1.pcf
+bitgen -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -f Algorithm1.ut Algorithm1.ncd
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -ifn Algorithm1.xst -ofn Algorithm1.syr
+netgen -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -w -dir netgen/synthesis -ofmt verilog -sim Algorithm1.ngc Algorithm1_synthesis.v
+ngdbuild -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Algorithm1.ngc Algorithm1.ngd
+map -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -p xc3s200-pq208-5 -cm area -pr b -k 4 -c 100 -o Algorithm1_map.ncd Algorithm1.ngd Algorithm1.pcf
+par -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -w -intstyle ise -ol std -t 1 Algorithm1_map.ncd Algorithm1.ncd Algorithm1.pcf
+trce -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -e 3 -l 3 -s 5 -xml Algorithm1 Algorithm1.ncd -o Algorithm1.twr Algorithm1.pcf
+bitgen -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -f Algorithm1.ut Algorithm1.ncd
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -ifn Algorithm1.xst -ofn Algorithm1.syr
+netgen -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -w -dir netgen/synthesis -ofmt verilog -sim Algorithm1.ngc Algorithm1_synthesis.v
+ngdbuild -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Algorithm1.ngc Algorithm1.ngd
+map -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -p xc3s200-pq208-5 -cm area -pr b -k 4 -c 100 -o Algorithm1_map.ncd Algorithm1.ngd Algorithm1.pcf
+par -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -w -intstyle ise -ol std -t 1 Algorithm1_map.ncd Algorithm1.ncd Algorithm1.pcf
+trce -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -e 3 -l 3 -s 5 -xml Algorithm1 Algorithm1.ncd -o Algorithm1.twr Algorithm1.pcf
+bitgen -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm1/DC_Algorithm1" -intstyle ise -f Algorithm1.ut Algorithm1.ncd

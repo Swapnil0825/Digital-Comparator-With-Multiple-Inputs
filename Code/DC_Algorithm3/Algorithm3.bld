@@ -1,0 +1,21 @@
+Release 8.1i ngdbuild I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p
+xc3s200-pq208-5 Algorithm3.ngc Algorithm3.ngd 
+
+Reading NGO file 'C:/Users/Lenovo/Desktop/SEM
+VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/Algorithm3.ngc' ...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 98396 kilobytes
+
+Writing NGD file "Algorithm3.ngd" ...
+
+Writing NGDBUILD log file "Algorithm3.bld"...

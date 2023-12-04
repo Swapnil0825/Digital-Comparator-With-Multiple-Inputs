@@ -1,0 +1,141 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : Test_Algorithm2.ant
+// /___/   /\     Timestamp : Sat Mar 04 20:19:14 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: Test_Algorithm2
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module Test_Algorithm2;
+    reg [3:0] a = 4'b1111;
+    reg [3:0] b = 4'b1111;
+    reg [3:0] c = 4'b1111;
+    reg [3:0] d = 4'b1111;
+    wire agt;
+    wire bgt;
+    wire cgt;
+    wire dgt;
+
+
+    Algorithm2 UUT (
+        .a(a),
+        .b(b),
+        .c(c),
+        .d(d),
+        .agt(agt),
+        .bgt(bgt),
+        .cgt(cgt),
+        .dgt(dgt));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_agt;
+        ANNOTATE_bgt;
+        ANNOTATE_cgt;
+        ANNOTATE_dgt;
+        forever begin
+            #50;
+            ANNOTATE_agt;
+            ANNOTATE_bgt;
+            ANNOTATE_cgt;
+            ANNOTATE_dgt;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Users\\Lenovo\\Desktop\\SEM VI\\DD\\CP\\Code\\Digital_Comparator\\DC_Algorithm2\\Test_Algorithm2.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        a = 4'b1100;
+        b = 4'b1011;
+        c = 4'b1010;
+        d = 4'b1001;
+        // -------------------------------------
+        // -------------  Current Time:  200ns
+        #100;
+        a = 4'b1001;
+        b = 4'b1100;
+        c = 4'b1011;
+        d = 4'b1010;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        a = 4'b1010;
+        b = 4'b1001;
+        c = 4'b1100;
+        d = 4'b1011;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        a = 4'b1011;
+        b = 4'b1010;
+        c = 4'b1001;
+        d = 4'b1100;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        a = 4'b0000;
+        b = 4'b0000;
+        c = 4'b0000;
+        d = 4'b0000;
+        // -------------------------------------
+    end
+
+    task ANNOTATE_agt;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,agt,%b]", $time, agt);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_bgt;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,bgt,%b]", $time, bgt);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_cgt;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,cgt,%b]", $time, cgt);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_dgt;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,dgt,%b]", $time, dgt);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

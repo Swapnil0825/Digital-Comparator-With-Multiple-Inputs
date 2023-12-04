@@ -1,0 +1,5 @@
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/DC_Algorithm2" -intstyle ise -ifn Algorithm2.xst -ofn Algorithm2.syr
+ngdbuild -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/DC_Algorithm2" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Algorithm2.ngc Algorithm2.ngd
+map -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/DC_Algorithm2" -intstyle ise -p xc3s200-pq208-5 -cm area -pr b -k 4 -c 100 -o Algorithm2_map.ncd Algorithm2.ngd Algorithm2.pcf
+par -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/DC_Algorithm2" -w -intstyle ise -ol std -t 1 Algorithm2_map.ncd Algorithm2.ncd Algorithm2.pcf
+trce -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm2/DC_Algorithm2" -intstyle ise -e 3 -l 3 -s 5 -xml Algorithm2 Algorithm2.ncd -o Algorithm2.twr Algorithm2.pcf

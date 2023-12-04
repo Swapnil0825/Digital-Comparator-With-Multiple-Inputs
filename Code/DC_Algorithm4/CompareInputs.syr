@@ -1,0 +1,280 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: CompareInputs.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CompareInputs.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CompareInputs"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-pq208
+
+---- Source Options
+Top Module Name                    : CompareInputs
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : CompareInputs.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Algorithm4.v" in library work
+Module <CompareInputs> compiled
+No errors in compilation
+Analysis of file <"CompareInputs.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <CompareInputs>.
+	N = 32'sb00000000000000000000000000001000
+Module <CompareInputs> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+INFO:Xst:1304 - Contents of register <i> in unit <CompareInputs> never changes during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <CompareInputs>.
+    Related source file is "Algorithm4.v".
+WARNING:Xst:1872 - Variable <i> is used but never assigned.
+WARNING:Xst:646 - Signal <done> is assigned but never used.
+WARNING:Xst:737 - Found 8-bit latch for signal <largest>.
+Unit <CompareInputs> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+
+Optimizing unit <CompareInputs> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CompareInputs, actual ratio is 2.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CompareInputs.ngr
+Top Level Output File Name         : CompareInputs
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 24
+
+Cell Usage :
+# BELS                             : 79
+#      LUT2                        : 13
+#      LUT3                        : 12
+#      LUT4                        : 54
+# FlipFlops/Latches                : 8
+#      LDCP                        : 8
+# IO Buffers                       : 24
+#      IBUF                        : 16
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-5 
+
+ Number of Slices:                      45  out of   1920     2%  
+ Number of 4 input LUTs:                79  out of   3840     2%  
+ Number of bonded IOBs:                 24  out of    141    17%  
+    IOB Flip Flops: 8
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+_n0001(_n00011:O)                  | NONE(*)(largest_7)     | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 10.487ns
+   Maximum output required time after clock: 6.141ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_n0001'
+  Total number of paths / destination ports: 401 / 8
+-------------------------------------------------------------------------
+Offset:              10.487ns (Levels of Logic = 7)
+  Source:            input2<7> (PAD)
+  Destination:       largest_4 (LATCH)
+  Destination Clock: _n0001 falling
+
+  Data Path: input2<7> to largest_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.715   1.346  input2_7_IBUF (input2_7_IBUF)
+     LUT2:I0->O            5   0.479   0.842  Ker31 (N3)
+     LUT4:I2->O            6   0.479   1.148  _n00027 (N523)
+     LUT3:I0->O           23   0.479   1.469  _n000267 (N563)
+     LUT4:I3->O            1   0.479   0.851  _n0003<4>180 (N385)
+     LUT2:I1->O            3   0.479   1.066  _n0003<4>191 (N386)
+     LUT4:I0->O            1   0.479   0.000  _n0003<4>209 (N392)
+     LDCP:D                    0.176          largest_4
+    ----------------------------------------
+    Total                     10.487ns (3.765ns logic, 6.722ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_n0001'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.141ns (Levels of Logic = 1)
+  Source:            largest_7 (LATCH)
+  Destination:       largest<7> (PAD)
+  Source Clock:      _n0001 falling
+
+  Data Path: largest_7 to largest<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             1   0.551   0.681  largest_7 (largest_7)
+     OBUF:I->O                 4.909          largest_7_OBUF (largest<7>)
+    ----------------------------------------
+    Total                      6.141ns (5.460ns logic, 0.681ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+CPU : 3.25 / 3.38 s | Elapsed : 3.00 / 4.00 s
+ 
+--> 
+
+Total memory usage is 156932 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

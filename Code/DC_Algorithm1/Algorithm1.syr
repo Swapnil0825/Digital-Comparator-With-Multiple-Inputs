@@ -1,0 +1,326 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.12 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: Algorithm1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Algorithm1.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Algorithm1"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-pq208
+
+---- Source Options
+Top Module Name                    : Algorithm1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : Algorithm1.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Algorithm1.v" in library work
+Module <Algorithm1> compiled
+No errors in compilation
+Analysis of file <"Algorithm1.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Algorithm1>.
+WARNING:Xst:905 - "Algorithm1.v" line 29: The signals <r> are missing in the sensitivity list of always block.
+Module <Algorithm1> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Algorithm1>.
+    Related source file is "Algorithm1.v".
+WARNING:Xst:646 - Signal <r> is assigned but never used.
+WARNING:Xst:737 - Found 4-bit latch for signal <$old_r_1>.
+    Found 4-bit 4-to-1 multiplexer for signal <$n0000>.
+    Found 4-bit comparator greater for signal <$n0001> created at line 33.
+    Found 4-bit 4-to-1 multiplexer for signal <$n0003>.
+    Found 4-bit comparator equal for signal <$n0004> created at line 70.
+    Found 4-bit comparator equal for signal <$n0005> created at line 75.
+    Found 4-bit comparator equal for signal <$n0006> created at line 80.
+    Found 4-bit comparator equal for signal <$n0007> created at line 85.
+    Found 4-bit comparator greater for signal <$n0008> created at line 46.
+    Found 4-bit comparator greater for signal <$n0010> created at line 35.
+    Found 4-bit comparator greater for signal <$n0011> created at line 31.
+    Found 4-bit comparator greater for signal <$n0012> created at line 48.
+    Found 4-bit comparator greater for signal <$n0013> created at line 58.
+    Summary:
+	inferred  10 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <Algorithm1> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 4-bit latch                                           : 1
+# Comparators                                          : 10
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 6
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 4-bit latch                                           : 1
+# Comparators                                          : 10
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 6
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+
+Optimizing unit <Algorithm1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Algorithm1, actual ratio is 1.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Algorithm1.ngr
+Top Level Output File Name         : Algorithm1
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 56
+#      LUT2                        : 4
+#      LUT3                        : 24
+#      LUT4                        : 24
+#      MUXF5                       : 4
+# FlipFlops/Latches                : 4
+#      LDCP                        : 4
+# IO Buffers                       : 20
+#      IBUF                        : 16
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-5 
+
+ Number of Slices:                      29  out of   1920     1%  
+ Number of Slice Flip Flops:             4  out of   3840     0%  
+ Number of 4 input LUTs:                52  out of   3840     1%  
+ Number of bonded IOBs:                 20  out of    141    14%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+N88(_n0001183:O)                   | NONE(*)(_old_r_1_3)    | 4     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 9.666ns
+   Maximum output required time after clock: 9.149ns
+   Maximum combinational path delay: 9.315ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'N88'
+  Total number of paths / destination ports: 196 / 4
+-------------------------------------------------------------------------
+Offset:              9.666ns (Levels of Logic = 7)
+  Source:            b<1> (PAD)
+  Destination:       _old_r_1_3 (LATCH)
+  Destination Clock: N88 falling
+
+  Data Path: b<1> to _old_r_1_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.715   1.078  b_1_IBUF (b_1_IBUF)
+     LUT4:I0->O            1   0.479   0.976  _n0008148_SW0 (N586)
+     LUT3:I0->O            1   0.479   0.976  _n0008148 (N128)
+     LUT3:I0->O            4   0.479   0.779  _n0008183 (N139)
+     MUXF5:S->O            7   0.540   1.201  _n0009220 (N573)
+     LUT4:I0->O            3   0.479   0.830  _n0008_rn_2 (mux_1__n0008_MUXF53)
+     LUT4:I2->O            1   0.479   0.000  _n001431 (_n0003<3>)
+     LDCP:D                    0.176          _old_r_1_3
+    ----------------------------------------
+    Total                      9.666ns (3.826ns logic, 5.840ns route)
+                                       (39.6% logic, 60.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'N88'
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Offset:              9.149ns (Levels of Logic = 3)
+  Source:            _old_r_1_0 (LATCH)
+  Destination:       dgt (PAD)
+  Source Clock:      N88 falling
+
+  Data Path: _old_r_1_0 to dgt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             4   0.551   1.074  _old_r_1_0 (_old_r_1_0)
+     LUT4:I0->O            1   0.479   0.976  agt426 (agt4_map831)
+     LUT2:I0->O            1   0.479   0.681  agt454 (agt_OBUF)
+     OBUF:I->O                 4.909          agt_OBUF (agt)
+    ----------------------------------------
+    Total                      9.149ns (6.418ns logic, 2.731ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Delay:               9.315ns (Levels of Logic = 4)
+  Source:            d<0> (PAD)
+  Destination:       dgt (PAD)
+
+  Data Path: d<0> to dgt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.715   1.076  d_0_IBUF (d_0_IBUF)
+     LUT4:I1->O            1   0.479   0.976  dgt426 (dgt4_map854)
+     LUT2:I0->O            1   0.479   0.681  dgt454 (dgt_OBUF)
+     OBUF:I->O                 4.909          dgt_OBUF (dgt)
+    ----------------------------------------
+    Total                      9.315ns (6.582ns logic, 2.733ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+CPU : 11.86 / 12.98 s | Elapsed : 12.00 / 13.00 s
+ 
+--> 
+
+Total memory usage is 157508 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

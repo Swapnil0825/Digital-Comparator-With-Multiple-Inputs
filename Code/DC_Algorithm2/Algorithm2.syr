@@ -1,0 +1,264 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.33 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.33 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: Algorithm2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Algorithm2.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Algorithm2"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-pq208
+
+---- Source Options
+Top Module Name                    : Algorithm2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : Algorithm2.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Algorithm2.v" in library work
+Module <Algorithm2> compiled
+No errors in compilation
+Analysis of file <"Algorithm2.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Algorithm2>.
+WARNING:Xst:905 - "Algorithm2.v" line 30: The signals <n1, n2, r> are missing in the sensitivity list of always block.
+Module <Algorithm2> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Algorithm2>.
+    Related source file is "Algorithm2.v".
+WARNING:Xst:646 - Signal <n1> is assigned but never used.
+WARNING:Xst:646 - Signal <n2> is assigned but never used.
+WARNING:Xst:646 - Signal <r> is assigned but never used.
+    Found 4-bit comparator greater for signal <$n0000> created at line 32.
+    Found 4-bit comparator greater for signal <$n0001> created at line 37.
+    Found 4-bit comparator greater for signal <$n0002> created at line 42.
+    Found 4-bit comparator equal for signal <$n0003> created at line 48.
+    Found 4-bit comparator equal for signal <$n0004> created at line 53.
+    Found 4-bit comparator equal for signal <$n0005> created at line 58.
+    Found 4-bit comparator equal for signal <$n0006> created at line 63.
+    Summary:
+	inferred   7 Comparator(s).
+Unit <Algorithm2> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Comparators                                          : 7
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Comparators                                          : 7
+ 4-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx.
+
+Optimizing unit <Algorithm2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Algorithm2, actual ratio is 1.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Algorithm2.ngr
+Top Level Output File Name         : Algorithm2
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 36
+#      LUT2                        : 5
+#      LUT3                        : 14
+#      LUT4                        : 17
+# IO Buffers                       : 20
+#      IBUF                        : 16
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200pq208-5 
+
+ Number of Slices:                      21  out of   1920     1%  
+ Number of 4 input LUTs:                36  out of   3840     0%  
+ Number of bonded IOBs:                 20  out of    141    14%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 22.098ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1336 / 4
+-------------------------------------------------------------------------
+Delay:               22.098ns (Levels of Logic = 13)
+  Source:            a<1> (PAD)
+  Destination:       dgt (PAD)
+
+  Data Path: a<1> to dgt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.715   1.066  a_1_IBUF (a_1_IBUF)
+     LUT4:I0->O            1   0.479   0.976  _n0000148_SW0 (N412)
+     LUT3:I0->O            1   0.479   0.976  _n0000148 (N61)
+     LUT3:I0->O            3   0.479   1.066  _n0000183 (N72)
+     LUT3:I0->O            3   0.479   0.830  _old_n1_1<2>1 (_old_n1_1<2>)
+     LUT4:I2->O            1   0.479   0.976  _n0002159 (N395)
+     LUT4:I0->O            1   0.479   0.740  _n0002163 (N399)
+     LUT4:I2->O            2   0.479   0.804  _n0002184 (N407)
+     LUT3:I2->O            2   0.479   1.040  _n0002197 (N409)
+     LUT3:I0->O            4   0.479   1.074  _old_r_3<0>1 (_old_r_3<0>)
+     LUT4:I0->O            1   0.479   0.976  agt426 (agt4_map772)
+     LUT2:I0->O            1   0.479   0.681  agt454 (agt_OBUF)
+     OBUF:I->O                 4.909          agt_OBUF (agt)
+    ----------------------------------------
+    Total                     22.098ns (10.893ns logic, 11.205ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+CPU : 4.12 / 4.48 s | Elapsed : 4.00 / 4.00 s
+ 
+--> 
+
+Total memory usage is 157316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,63 @@
+----------------------------------------------------------------
+Release 8.1i - XPower SoftwareVersion:I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+Design:       C:\Users\Lenovo\Desktop\SEM
+VI\DD\CP\Code\Digital_Comparator\DC_Algorithm1\Algorithm1.ncd
+Preferences:  C:\Users\Lenovo\Desktop\SEM
+VI\DD\CP\Code\Digital_Comparator\DC_Algorithm1\Algorithm1.pcf
+Part:         3s200pq208-5
+Data version: ADVANCED,v1.0,11-03-03
+
+XPower and Datasheet may have some Quiescent Current differences.
+This is due to the fact that the quiescent numbers in XPower are based on
+measurements of real designs with active functional elements reflecting real
+world design scenarios.
+
+
+
+Power summary:                        I(mA)    P(mW)
+----------------------------------------------------------------
+Total estimated power consumption:                37
+                               ---
+                      Vccint 1.20V:       10       12
+                      Vccaux 2.50V:       10       25
+                      Vcco25 2.50V:        0        0
+                               ---
+                           Inputs:        0        0
+                            Logic:        0        0
+                          Outputs:
+                             Vcco25       0        0
+                          Signals:        0        0
+                               ---
+           Quiescent Vccint  1.20V:       10       12
+           Quiescent Vccaux  2.50V:       10       25
+
+Thermal summary:
+----------------------------------------------------------------
+   Estimated junction temperature:                26C
+                  Ambient temp:  25C
+                     Case temp:  26C
+                     Theta J-A:  36C/W
+
+Decoupling Network Summary:      Cap Range (uF)      #
+----------------------------------------------------------------
+Capacitor Recommendations:    
+Total for      Vccint :                              4
+                                470.0  - 1000.0 :    1
+                               0.0100  - 0.0470 :    1
+                               0.0010  - 0.0047 :    2
+                                      ---
+Total for      Vccaux :                              8
+                                470.0  - 1000.0 :    1
+                               0.0470  - 0.2200 :    1
+                               0.0100  - 0.0470 :    2
+                               0.0010  - 0.0047 :    4
+                                      ---
+Total for      Vcco25 :                              8
+                                470.0  - 1000.0 :    1
+                               0.0470  - 0.2200 :    1
+                               0.0100  - 0.0470 :    2
+                               0.0010  - 0.0047 :    4
+
+Analysis completed: Sat May 06 03:31:33 2023
+----------------------------------------------------------------

@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : ISE
+//  /   /         Filename : Test.tfw
+// /___/   /\     Timestamp : Fri May 05 23:04:28 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: Test
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module Test;
+    reg [7:0] input1 = 8'b00001111;
+    reg [7:0] input2 = 8'b00001110;
+    wire [7:0] largest;
+
+
+    CompareInputs UUT (
+        .input1(input1),
+        .input2(input2),
+        .largest(largest));
+
+        integer TX_ERROR = 0;
+        
+        initial begin  // Open the results file...
+            #1000 // Final time:  1000 ns
+            if (TX_ERROR == 0) begin
+                $display("No errors or warnings.");
+                end else begin
+                    $display("%d errors found in simulation.", TX_ERROR);
+                    end
+                    $stop;
+                end
+
+                initial begin
+                    // -------------  Current Time:  100ns
+                    #100;
+                    input1 = 8'b00001100;
+                    input2 = 8'b00001010;
+                    // -------------------------------------
+                    // -------------  Current Time:  200ns
+                    #100;
+                    input1 = 8'b00000000;
+                    input2 = 8'b00000000;
+                end
+
+                task CHECK_largest;
+                    input [7:0] NEXT_largest;
+
+                    #0 begin
+                        if (NEXT_largest !== largest) begin
+                            $display("Error at time=%dns largest=%b, expected=%b", $time, largest, NEXT_largest);
+                            TX_ERROR = TX_ERROR + 1;
+                        end
+                    end
+                endtask
+
+            endmodule
+

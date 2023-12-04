@@ -1,0 +1,104 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise DC_Algorithm2.ise -intstyle ise -e 3 -l 3 -s 5
+-xml Algorithm2 Algorithm2.ncd -o Algorithm2.twr Algorithm2.pcf
+
+
+Design file:              algorithm2.ncd
+Physical constraint file: algorithm2.pcf
+Device,speed:             xc3s200,-5 (PRODUCTION 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |agt            |   19.401|
+a<0>           |bgt            |   20.095|
+a<0>           |cgt            |   19.838|
+a<0>           |dgt            |   20.413|
+a<1>           |agt            |   18.080|
+a<1>           |bgt            |   18.774|
+a<1>           |cgt            |   18.517|
+a<1>           |dgt            |   19.092|
+a<2>           |agt            |   18.156|
+a<2>           |bgt            |   18.850|
+a<2>           |cgt            |   18.593|
+a<2>           |dgt            |   19.168|
+a<3>           |agt            |   16.434|
+a<3>           |bgt            |   17.128|
+a<3>           |cgt            |   16.871|
+a<3>           |dgt            |   17.446|
+b<0>           |agt            |   18.596|
+b<0>           |bgt            |   19.290|
+b<0>           |cgt            |   19.033|
+b<0>           |dgt            |   19.608|
+b<1>           |agt            |   18.943|
+b<1>           |bgt            |   19.637|
+b<1>           |cgt            |   19.380|
+b<1>           |dgt            |   19.955|
+b<2>           |agt            |   18.023|
+b<2>           |bgt            |   18.717|
+b<2>           |cgt            |   18.460|
+b<2>           |dgt            |   19.035|
+b<3>           |agt            |   16.969|
+b<3>           |bgt            |   17.663|
+b<3>           |cgt            |   17.406|
+b<3>           |dgt            |   17.981|
+c<0>           |agt            |   18.735|
+c<0>           |bgt            |   19.429|
+c<0>           |cgt            |   19.172|
+c<0>           |dgt            |   19.747|
+c<1>           |agt            |   18.156|
+c<1>           |bgt            |   18.850|
+c<1>           |cgt            |   18.593|
+c<1>           |dgt            |   19.168|
+c<2>           |agt            |   17.474|
+c<2>           |bgt            |   18.168|
+c<2>           |cgt            |   17.911|
+c<2>           |dgt            |   18.486|
+c<3>           |agt            |   17.331|
+c<3>           |bgt            |   18.025|
+c<3>           |cgt            |   17.768|
+c<3>           |dgt            |   18.343|
+d<0>           |agt            |   17.802|
+d<0>           |bgt            |   18.496|
+d<0>           |cgt            |   18.239|
+d<0>           |dgt            |   18.814|
+d<1>           |agt            |   18.069|
+d<1>           |bgt            |   18.763|
+d<1>           |cgt            |   18.506|
+d<1>           |dgt            |   19.081|
+d<2>           |agt            |   17.684|
+d<2>           |bgt            |   18.378|
+d<2>           |cgt            |   18.121|
+d<2>           |dgt            |   18.696|
+d<3>           |agt            |   16.631|
+d<3>           |bgt            |   17.325|
+d<3>           |cgt            |   17.068|
+d<3>           |dgt            |   17.643|
+---------------+---------------+---------+
+
+Analysis completed Sat May 06 03:54:25 2023
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 166 MB

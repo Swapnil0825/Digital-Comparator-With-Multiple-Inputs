@@ -1,0 +1,9 @@
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -ifn Algorithm3.xst -ofn Algorithm3.syr
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -ifn Algorithm3.xst -ofn Algorithm3.syr
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -ifn Algorithm3.xst -ofn Algorithm3.syr
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -ifn Algorithm3.xst -ofn Algorithm3.syr
+xst -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -ifn Algorithm3.xst -ofn Algorithm3.syr
+ngdbuild -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 Algorithm3.ngc Algorithm3.ngd
+map -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -p xc3s200-pq208-5 -cm area -pr b -k 4 -c 100 -o Algorithm3_map.ncd Algorithm3.ngd Algorithm3.pcf
+par -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -w -intstyle ise -ol std -t 1 Algorithm3_map.ncd Algorithm3.ncd Algorithm3.pcf
+trce -ise "C:/Users/Lenovo/Desktop/SEM VI/DD/CP/Code/Digital_Comparator/DC_Algorithm3/DC_Algorithm" -intstyle ise -e 3 -l 3 -s 5 -xml Algorithm3 Algorithm3.ncd -o Algorithm3.twr Algorithm3.pcf
